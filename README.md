@@ -15,7 +15,7 @@ The library uses some default settings for chunking and object naming:
 ```
 
 The meta data OID entries store the inode, the data pool and the modification time as OMAP attributes with the given OMAP keys. The library supports automatic static read-ahead, which disabled 
-once a read cannot be satisfied by the used read-ahead strategy. To improve small write the library maintains a write-back buffer to aggregate small aio_writes into the given chunk size.
+once a read cannot be satisfied by the used read-ahead strategy. To improve small writes the library maintains a write-back buffer to aggregate small aio_writes into the given chunk size.
 
 An example how to use the library:
 ```
@@ -31,6 +31,8 @@ exosf.unlink();
 ```
 
 When using the library for writing, you have to take care to avoid parallel writers using the *lock* interface.
+
+Please be aware that the library is currently only in a *proof-of-concept* state.
 
 
 
