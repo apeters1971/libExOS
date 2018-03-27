@@ -30,6 +30,13 @@ free(buffer);
 exosf.unlink();
 ```
 
+The supported CGI variables are:
+````
+rados.md=<poolname>
+rados.data=<poolname>
+rados.user=<username>
+rados.config=<configfilename>
+
 When using the library for writing, you have to take care to avoid parallel writers using the *lock* interface.
 
 Please be aware that the library is currently only in a *proof-of-concept* state.
